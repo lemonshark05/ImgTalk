@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D95E7C602A23153F0016CC16 /* ImageTalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E7C5F2A23153F0016CC16 /* ImageTalkApp.swift */; };
+		D95E7C642A2315400016CC16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95E7C632A2315400016CC16 /* Assets.xcassets */; };
+		D95E7C672A2315400016CC16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95E7C662A2315400016CC16 /* Preview Assets.xcassets */; };
+		D95E7C8D2A2315A10016CC16 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E7C8C2A2315A10016CC16 /* TestData.swift */; };
+		D95E7C8F2A2315DF0016CC16 /* imagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E7C8E2A2315DF0016CC16 /* imagesView.swift */; };
+		D95E7C912A23180D0016CC16 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E7C902A23180D0016CC16 /* ListView.swift */; };
+		D9623ABD2A293A3C007F4256 /* HuggingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9623ABC2A293A3C007F4256 /* HuggingAPI.swift */; };
+		D983CCE52A2C443C007B6EA2 /* RecorderAndPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D983CCE42A2C443C007B6EA2 /* RecorderAndPlayer.swift */; };
+		D9972FBC2A28797100F84A27 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9972FBB2A28797100F84A27 /* ProgressBar.swift */; };
+		D9A6EFA52A24167600B519F5 /* info.txt in Resources */ = {isa = PBXBuildFile; fileRef = D9A6EFA42A24167600B519F5 /* info.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D95E7C6D2A2315400016CC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95E7C542A23153F0016CC16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95E7C5B2A23153F0016CC16;
+			remoteInfo = ImageTalk;
+		};
+		D95E7C772A2315400016CC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95E7C542A23153F0016CC16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95E7C5B2A23153F0016CC16;
+			remoteInfo = ImageTalk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D95E7C5C2A23153F0016CC16 /* ImageTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95E7C5F2A23153F0016CC16 /* ImageTalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTalkApp.swift; sourceTree = "<group>"; };
+		D95E7C632A2315400016CC16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D95E7C662A2315400016CC16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D95E7C6C2A2315400016CC16 /* ImageTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95E7C762A2315400016CC16 /* ImageTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95E7C8C2A2315A10016CC16 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		D95E7C8E2A2315DF0016CC16 /* imagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesView.swift; sourceTree = "<group>"; };
+		D95E7C902A23180D0016CC16 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		D9623ABC2A293A3C007F4256 /* HuggingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuggingAPI.swift; sourceTree = "<group>"; };
+		D983CCE42A2C443C007B6EA2 /* RecorderAndPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderAndPlayer.swift; sourceTree = "<group>"; };
+		D98F27862A2B088500D3B24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D9972FBB2A28797100F84A27 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		D9A6EFA42A24167600B519F5 /* info.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = info.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D95E7C592A23153F0016CC16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95E7C692A2315400016CC16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95E7C732A2315400016CC16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D95E7C532A23153F0016CC16 = {
+			isa = PBXGroup;
+			children = (
+				D95E7C5E2A23153F0016CC16 /* ImageTalk */,
+				D95E7C5D2A23153F0016CC16 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D95E7C5D2A23153F0016CC16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D95E7C5C2A23153F0016CC16 /* ImageTalk.app */,
+				D95E7C6C2A2315400016CC16 /* ImageTalkTests.xctest */,
+				D95E7C762A2315400016CC16 /* ImageTalkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D95E7C5E2A23153F0016CC16 /* ImageTalk */ = {
+			isa = PBXGroup;
+			children = (
+				D98F27862A2B088500D3B24B /* Info.plist */,
+				D9A6EFA42A24167600B519F5 /* info.txt */,
+				D95E7C8B2A2315940016CC16 /* Model */,
+				D95E7C892A2315720016CC16 /* Views */,
+				D95E7C5F2A23153F0016CC16 /* ImageTalkApp.swift */,
+				D95E7C632A2315400016CC16 /* Assets.xcassets */,
+				D95E7C652A2315400016CC16 /* Preview Content */,
+			);
+			path = ImageTalk;
+			sourceTree = "<group>";
+		};
+		D95E7C652A2315400016CC16 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D95E7C662A2315400016CC16 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D95E7C892A2315720016CC16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D95E7C902A23180D0016CC16 /* ListView.swift */,
+				D95E7C8E2A2315DF0016CC16 /* imagesView.swift */,
+				D9972FBB2A28797100F84A27 /* ProgressBar.swift */,
+				D983CCE42A2C443C007B6EA2 /* RecorderAndPlayer.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D95E7C8B2A2315940016CC16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D95E7C8C2A2315A10016CC16 /* TestData.swift */,
+				D9623ABC2A293A3C007F4256 /* HuggingAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D95E7C5B2A23153F0016CC16 /* ImageTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95E7C802A2315400016CC16 /* Build configuration list for PBXNativeTarget "ImageTalk" */;
+			buildPhases = (
+				D95E7C582A23153F0016CC16 /* Sources */,
+				D95E7C592A23153F0016CC16 /* Frameworks */,
+				D95E7C5A2A23153F0016CC16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageTalk;
+			productName = ImageTalk;
+			productReference = D95E7C5C2A23153F0016CC16 /* ImageTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D95E7C6B2A2315400016CC16 /* ImageTalkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95E7C832A2315400016CC16 /* Build configuration list for PBXNativeTarget "ImageTalkTests" */;
+			buildPhases = (
+				D95E7C682A2315400016CC16 /* Sources */,
+				D95E7C692A2315400016CC16 /* Frameworks */,
+				D95E7C6A2A2315400016CC16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95E7C6E2A2315400016CC16 /* PBXTargetDependency */,
+			);
+			name = ImageTalkTests;
+			productName = ImageTalkTests;
+			productReference = D95E7C6C2A2315400016CC16 /* ImageTalkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D95E7C752A2315400016CC16 /* ImageTalkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95E7C862A2315400016CC16 /* Build configuration list for PBXNativeTarget "ImageTalkUITests" */;
+			buildPhases = (
+				D95E7C722A2315400016CC16 /* Sources */,
+				D95E7C732A2315400016CC16 /* Frameworks */,
+				D95E7C742A2315400016CC16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95E7C782A2315400016CC16 /* PBXTargetDependency */,
+			);
+			name = ImageTalkUITests;
+			productName = ImageTalkUITests;
+			productReference = D95E7C762A2315400016CC16 /* ImageTalkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D95E7C542A23153F0016CC16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D95E7C5B2A23153F0016CC16 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D95E7C6B2A2315400016CC16 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D95E7C5B2A23153F0016CC16;
+					};
+					D95E7C752A2315400016CC16 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D95E7C5B2A23153F0016CC16;
+					};
+				};
+			};
+			buildConfigurationList = D95E7C572A23153F0016CC16 /* Build configuration list for PBXProject "ImageTalk" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D95E7C532A23153F0016CC16;
+			productRefGroup = D95E7C5D2A23153F0016CC16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D95E7C5B2A23153F0016CC16 /* ImageTalk */,
+				D95E7C6B2A2315400016CC16 /* ImageTalkTests */,
+				D95E7C752A2315400016CC16 /* ImageTalkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D95E7C5A2A23153F0016CC16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95E7C672A2315400016CC16 /* Preview Assets.xcassets in Resources */,
+				D95E7C642A2315400016CC16 /* Assets.xcassets in Resources */,
+				D9A6EFA52A24167600B519F5 /* info.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95E7C6A2A2315400016CC16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95E7C742A2315400016CC16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D95E7C582A23153F0016CC16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D983CCE52A2C443C007B6EA2 /* RecorderAndPlayer.swift in Sources */,
+				D95E7C8F2A2315DF0016CC16 /* imagesView.swift in Sources */,
+				D95E7C8D2A2315A10016CC16 /* TestData.swift in Sources */,
+				D9623ABD2A293A3C007F4256 /* HuggingAPI.swift in Sources */,
+				D95E7C912A23180D0016CC16 /* ListView.swift in Sources */,
+				D9972FBC2A28797100F84A27 /* ProgressBar.swift in Sources */,
+				D95E7C602A23153F0016CC16 /* ImageTalkApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95E7C682A2315400016CC16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95E7C722A2315400016CC16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D95E7C6E2A2315400016CC16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95E7C5B2A23153F0016CC16 /* ImageTalk */;
+			targetProxy = D95E7C6D2A2315400016CC16 /* PBXContainerItemProxy */;
+		};
+		D95E7C782A2315400016CC16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95E7C5B2A23153F0016CC16 /* ImageTalk */;
+			targetProxy = D95E7C772A2315400016CC16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D95E7C7E2A2315400016CC16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D95E7C7F2A2315400016CC16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D95E7C812A2315400016CC16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ImageTalk/Preview Content\"";
+				DEVELOPMENT_TEAM = 9UHTF3DN2Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ImageTalk/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hula.imageTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D95E7C822A2315400016CC16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ImageTalk/Preview Content\"";
+				DEVELOPMENT_TEAM = 9UHTF3DN2Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ImageTalk/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hula.imageTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D95E7C842A2315400016CC16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X4KKG8DJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lemontree.ImageTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageTalk.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ImageTalk";
+			};
+			name = Debug;
+		};
+		D95E7C852A2315400016CC16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X4KKG8DJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lemontree.ImageTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageTalk.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ImageTalk";
+			};
+			name = Release;
+		};
+		D95E7C872A2315400016CC16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X4KKG8DJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lemontree.ImageTalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageTalk;
+			};
+			name = Debug;
+		};
+		D95E7C882A2315400016CC16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X4KKG8DJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lemontree.ImageTalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageTalk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D95E7C572A23153F0016CC16 /* Build configuration list for PBXProject "ImageTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95E7C7E2A2315400016CC16 /* Debug */,
+				D95E7C7F2A2315400016CC16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95E7C802A2315400016CC16 /* Build configuration list for PBXNativeTarget "ImageTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95E7C812A2315400016CC16 /* Debug */,
+				D95E7C822A2315400016CC16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95E7C832A2315400016CC16 /* Build configuration list for PBXNativeTarget "ImageTalkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95E7C842A2315400016CC16 /* Debug */,
+				D95E7C852A2315400016CC16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95E7C862A2315400016CC16 /* Build configuration list for PBXNativeTarget "ImageTalkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95E7C872A2315400016CC16 /* Debug */,
+				D95E7C882A2315400016CC16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D95E7C542A23153F0016CC16 /* Project object */;
+}

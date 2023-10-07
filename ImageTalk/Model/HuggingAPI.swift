@@ -25,6 +25,7 @@ struct HuggingAPI {
         task.resume()
     }
 }
+
 struct WhisperAPI {
     static let apiKey = "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"
     static let baseURL = "https://api-inference.huggingface.co/models/openai/whisper-base"

@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-struct RegisterViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class RegisterViewModel: ObservableObject {
+    @Published var email = ""
+    @Published var password = ""
+    @Published var fullname = ""
+    func createUser () async throws {
+        
     }
-}
-
-#Preview {
-    RegisterViewModel()
 }

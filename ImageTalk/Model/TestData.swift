@@ -70,6 +70,7 @@ class AudioRecord: ObservableObject {
 
     @Published var playbackState: PlaybackState = .stopped
     @Published var state: State = .idle
+    @Published var recordingList: [URL] = []
 
     private var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer!
@@ -135,6 +136,8 @@ class AudioRecord: ObservableObject {
         if audioRecorder != nil {
             audioRecorder.stop()
             state = .doneRecording
+            let newURL = audioURL(for: currentPictureIndex)
+            recordingList.append(newURL)
         }
     }
 
@@ -214,6 +217,15 @@ class Player: NSObject, AVAudioPlayerDelegate {
         }
     }
 
+    func playAudio(url: URL) {
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            print("Failed to play audio")
+        }
+    }
+    
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         playNext?()
     }

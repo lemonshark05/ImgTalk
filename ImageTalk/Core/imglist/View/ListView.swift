@@ -10,18 +10,39 @@ import SwiftUI
 struct ListView: View {
     @StateObject private var testData = TestData()
     @EnvironmentObject var audioRecorder: AudioRecord
+    @State private var showingTextToSpeech = false
 
     var body: some View {
-        List(testData.tests) { test in
-            NavigationLink(destination: RecorderAndPlayerView()){
-                Text(test.name)
+        VStack{
+            List(testData.tests) { test in
+                NavigationLink(destination: imagesView(imageName: test.imageRoute, text: test.info)) {
+                    HStack {
+                        Image(test.imageRoute)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30)
+                        Text(test.name)
+                    }
+                }
+            }.navigationBarTitle("Picture Talk")
+            
+            Spacer()
+            
+            Button("Upload Text") {
+                showingTextToSpeech = true
             }
-            .navigationBarTitle("看图说话")
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+        }
+        .sheet(isPresented: $showingTextToSpeech) {
+            TextToSpeechView()
         }
     }
 }
 
-struct ListView_Previews: PreviewProvider {
+struct UserListView_Previews: PreviewProvider {
     static var previews: some View {
         ListView()
     }

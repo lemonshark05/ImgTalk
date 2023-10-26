@@ -17,6 +17,9 @@
 		D983CCE52A2C443C007B6EA2 /* RecorderAndPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D983CCE42A2C443C007B6EA2 /* RecorderAndPlayer.swift */; };
 		D9972FBC2A28797100F84A27 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9972FBB2A28797100F84A27 /* ProgressBar.swift */; };
 		D9A6EFA52A24167600B519F5 /* info.txt in Resources */ = {isa = PBXBuildFile; fileRef = D9A6EFA42A24167600B519F5 /* info.txt */; };
+		D9C4B7B22AD76665005F9B57 /* TextToSpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C4B7B12AD76665005F9B57 /* TextToSpeechView.swift */; };
+		D9C939052AE9CDD400C47144 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C939042AE9CDD400C47144 /* UserListView.swift */; };
+		D9C939082AE9CF2100C47144 /* SpeechToTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C939072AE9CF2100C47144 /* SpeechToTextView.swift */; };
 		D9D258FB2AD12CAA00914B0F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D258FA2AD12CAA00914B0F /* LoginView.swift */; };
 		D9D258FD2AD12CD500914B0F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D258FC2AD12CD500914B0F /* LoginViewModel.swift */; };
 		D9D258FF2AD12CFD00914B0F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D258FE2AD12CFD00914B0F /* RegisterViewModel.swift */; };
@@ -60,6 +63,9 @@
 		D98F27862A2B088500D3B24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D9972FBB2A28797100F84A27 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		D9A6EFA42A24167600B519F5 /* info.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = info.txt; sourceTree = "<group>"; };
+		D9C4B7B12AD76665005F9B57 /* TextToSpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechView.swift; sourceTree = "<group>"; };
+		D9C939042AE9CDD400C47144 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		D9C939072AE9CF2100C47144 /* SpeechToTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToTextView.swift; sourceTree = "<group>"; };
 		D9D258FA2AD12CAA00914B0F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D9D258FC2AD12CD500914B0F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D9D258FE2AD12CFD00914B0F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -117,7 +123,6 @@
 		D95E7C5E2A23153F0016CC16 /* ImageTalk */ = {
 			isa = PBXGroup;
 			children = (
-				D9D258F32AD12BD400914B0F /* App */,
 				D9D258F42AD12BDB00914B0F /* Core */,
 				D95E7C8B2A2315940016CC16 /* Model */,
 				D9D259072AD12E7300914B0F /* Service */,
@@ -149,19 +154,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D9D258F32AD12BD400914B0F /* App */ = {
+		D9C4B7B02AD76656005F9B57 /* Text */ = {
 			isa = PBXGroup;
 			children = (
+				D9C4B7B12AD76665005F9B57 /* TextToSpeechView.swift */,
+				D9C939072AE9CF2100C47144 /* SpeechToTextView.swift */,
 			);
-			path = App;
+			path = Text;
+			sourceTree = "<group>";
+		};
+		D9C939062AE9CDDD00C47144 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D9C939042AE9CDD400C47144 /* UserListView.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		D9D258F42AD12BDB00914B0F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D9C939062AE9CDDD00C47144 /* User */,
+				D9C4B7B02AD76656005F9B57 /* Text */,
 				D9D258F62AD12BFD00914B0F /* Authority */,
 				D9D258F52AD12BE100914B0F /* imglist */,
-				D9D259022AD12DA900914B0F /* Root */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -208,13 +224,6 @@
 			children = (
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		D9D259022AD12DA900914B0F /* Root */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Root;
 			sourceTree = "<group>";
 		};
 		D9D259072AD12E7300914B0F /* Service */ = {
@@ -383,9 +392,12 @@
 				D95E7C8D2A2315A10016CC16 /* TestData.swift in Sources */,
 				D9623ABD2A293A3C007F4256 /* HuggingAPI.swift in Sources */,
 				D95E7C912A23180D0016CC16 /* ListView.swift in Sources */,
+				D9C4B7B22AD76665005F9B57 /* TextToSpeechView.swift in Sources */,
 				D9D259092AD12E9A00914B0F /* MessageService.swift in Sources */,
 				D9972FBC2A28797100F84A27 /* ProgressBar.swift in Sources */,
+				D9C939052AE9CDD400C47144 /* UserListView.swift in Sources */,
 				D9D259042AD12DF400914B0F /* User.swift in Sources */,
+				D9C939082AE9CF2100C47144 /* SpeechToTextView.swift in Sources */,
 				D9D259062AD12E0C00914B0F /* Message.swift in Sources */,
 				D9D2590B2AD12ED600914B0F /* UserService.swift in Sources */,
 				D9D258FB2AD12CAA00914B0F /* LoginView.swift in Sources */,

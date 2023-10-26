@@ -15,7 +15,7 @@ struct ImageTalkApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ListView()
+                UserListView()
                     .environmentObject(testData)
                     .environmentObject(audioRecorder)
             }.navigationViewStyle(StackNavigationViewStyle())

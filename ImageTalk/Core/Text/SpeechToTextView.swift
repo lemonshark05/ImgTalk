@@ -51,7 +51,7 @@ struct SpeechToTextView: View {
                         HStack {
                             Text(url.lastPathComponent)
                             Button("Play") {
-//                                self.audioRecorder.playAudio(url: url)
+// how to add player method?
                             }
                         }
                     }

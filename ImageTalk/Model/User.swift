@@ -8,12 +8,16 @@
 import Foundation
 
 struct User: Codable, Identifiable, Hashable{
-    var id = NSUUID() .uuidString
-    let fullname: String
+    let id: String
+    var username: String
     let email: String
+    var bio: String?
+    var fullname: String?
     var profileImageUrl: String?
 }
 
 extension User {
-    static let MOCK_USER = User(fullname: "Bruce Wayne", email: "batman@gmail.com", profileImageUrl: "app-icon")
+    static var MOCK_USER: [User] = [
+        .init(id: NSUUID() .uuidString, username: "Bruce Wayne", email: "Hula", bio: "batman@gmail.com", profileImageUrl: "app-icon")
+        ]
 }

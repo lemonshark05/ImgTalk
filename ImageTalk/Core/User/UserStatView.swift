@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct UserStatView: View {
+    let value: Int
+    let title: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text ("\(value)")
+                .font(.subheadline)
+                .fontWeight(.semibold)
+            Text(title)
+                .font(.footnote)
+            
+        }
+        .frame (width: 76)
     }
 }
 
-#Preview {
-    UserStatView()
+struct UserStatView_Previews: PreviewProvider {
+    static var previews: some View {
+        UserStatView(value: 12, title: "Followers")
+    }
 }

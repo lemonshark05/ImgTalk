@@ -9,7 +9,29 @@ import SwiftUI
 
 struct QuestionView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                LazyVStack(spacing: 30) {
+                    ForEach(0...10, id: \.self) { post in
+                        QuestionCell()
+                    }
+                }
+                .padding(.top, 8)
+            }
+            .navigationTitle("Question")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+//                    Image ("icon")
+//                        .resizable()
+//                        .frame(width: 100, height: 32)
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Image (systemName: "paperplane")
+                        .imageScale(.large)
+                }
+            }
+        }
     }
 }
 

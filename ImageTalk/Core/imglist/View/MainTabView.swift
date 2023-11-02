@@ -9,10 +9,35 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            QuestionView()
+                .tabItem{
+                    Image (systemName: "house")
+                }
+            SearchView()
+                .tabItem{
+                Image (systemName: "magnifyingglass")
+            }
+            Text("Upload Post")
+                .tabItem{
+                    Image (systemName: "plus.square")
+                }
+            Text("Notifications")
+                .tabItem{
+                    Image (systemName: "heart")
+                }
+            ProfileView()
+                .tabItem{
+                    Image (systemName: "person")
+                }
+        }
+        .accentColor(.blue)
     }
 }
-
-#Preview {
-    MainTabView()
+struct MainTabView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        MainTabView()
+        
+    }
 }

@@ -21,24 +21,19 @@ struct LoginView: View {
                     .frame(width: 180, height: 180)
                     .cornerRadius(10)
                     .padding ()
+                
                 // text fields
                 VStack(spacing: 12) {
                     TextField("Enter your email", text: $viewModel.email)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background (Color (.systemGray6))
-                        .cornerRadius (10)
-                        .padding (.horizontal, 24)
+                        .autocapitalization(.none)
+                        .modifier(IGTextFieldModifier())
+                    
                     SecureField("Enter your password", text: $viewModel.password)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background (Color (.systemGray6))
-                        .cornerRadius (10)
-                        .padding (.horizontal, 24)
+                        .modifier(IGTextFieldModifier())
                 }
                 // forgot password
                 Button {
-                    print ("Forgot password")
+                    print ("Show forgot password")
                 } label: {
                     Text ("Forgot password?")
                         .font(.footnote)
@@ -84,10 +79,12 @@ struct LoginView: View {
                 .padding (.top, 8)
                 
                 Spacer()
-                // sign up link
+               
                 Divider()
+                
                 NavigationLink{
-                    RegisterView()
+                    AddEmailView()
+                        .navigationBarBackButtonHidden(true)
                 } label: {
                     HStack(spacing: 3) {
                         Text ("Don't have an account?")
@@ -96,8 +93,7 @@ struct LoginView: View {
                     }
                     .font (.footnote)
                 }
-                .padding(.vertical)
-                
+                .padding(.vertical, 16)
             }
         }.navigationViewStyle(StackNavigationViewStyle())
     }

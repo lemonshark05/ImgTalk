@@ -146,5 +146,179 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31789A7D-202D-4B26-BF27-559D7E991745"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageTalk/App/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "login(withEmail:password:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "31789A7D-202D-4B26-BF27-559D7E991745 - 77d0b5479e04f2f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for ImageTalk.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "ImageTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lemonshark/Documents/ImgTalk1/ImageTalk/App/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "31789A7D-202D-4B26-BF27-559D7E991745 - 4e372c7e5741556d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for ImageTalk.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "ImageTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lemonshark/Documents/ImgTalk1/ImageTalk/App/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "20B9DFC2-75E4-4B61-8C56-74BC1F52B753"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageTalk/App/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "login(withEmail:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D76C8BAF-F2FF-4C8D-865A-77C0AFD88D97"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageTalk/App/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "login(withEmail:password:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D76C8BAF-F2FF-4C8D-865A-77C0AFD88D97 - 3b19b8b70b89ae36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for ImageTalk.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "ImageTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lemonshark/Documents/ImgTalk1/ImageTalk/App/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "D76C8BAF-F2FF-4C8D-865A-77C0AFD88D97 - 7fa9e27abef83a6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for ImageTalk.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "ImageTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lemonshark/Documents/ImgTalk1/ImageTalk/App/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "D76C8BAF-F2FF-4C8D-865A-77C0AFD88D97 - 77d0b5479e04ed34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for ImageTalk.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "ImageTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lemonshark/Documents/ImgTalk1/ImageTalk/App/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "D76C8BAF-F2FF-4C8D-865A-77C0AFD88D97 - 4e372c7e57414aab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for ImageTalk.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "ImageTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lemonshark/Documents/ImgTalk1/ImageTalk/App/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84ACEE12-5BBF-4698-8825-F1AA251A6B7F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageTalk/App/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "login(withEmail:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74260590-03C3-4CAA-AE2E-BB95931D35BE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageTalk/App/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "createUser(email:password:username:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

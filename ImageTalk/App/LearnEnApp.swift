@@ -6,13 +6,36 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
-struct LearnEnApp: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+
+    return true
+  }
 }
 
-#Preview {
-    LearnEnApp()
+@main
+struct LearnEnApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject private var testData = TestData() // Replace TestData with your actual environment object
+    @StateObject private var audioRecorder = AudioRecord()
+        
+//    var body: some Scene {
+//        WindowGroup {
+//            NavigationView {
+//                UserListView()
+//                    .environmentObject(testData)
+//                    .environmentObject(audioRecorder)
+//            }.navigationViewStyle(StackNavigationViewStyle())
+//        }
+//    }
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
 }

@@ -42,13 +42,14 @@ struct LoginView: View {
                         .padding(.trailing, 28)
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
+                
                 // login button
                 Button {
                     Task {
-                        try await viewModel.login()
+                        try await viewModel.signIn()
                     }
                 } label: {
-                    Text ("Login" )
+                    Text ("Login")
                         .font (.subheadline)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)

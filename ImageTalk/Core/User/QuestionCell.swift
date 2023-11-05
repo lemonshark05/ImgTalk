@@ -8,24 +8,28 @@
 import SwiftUI
 
 struct QuestionCell: View {
+    let post: Post
+    
     var body: some View {
         VStack {
             // image + username
             HStack{
-                Image("3" )
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 40, height:40)
-                    .clipShape(Circle())
-                Text ("Title?")
-                    .font(.footnote)
-                    .fontWeight(.semibold)
+                if let user = post.user {
+                    Image(user.profileImageUrl ?? "")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40, height:40)
+                        .clipShape(Circle())
+                    Text(user.username)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                }
                 Spacer ()
             }
             .padding (.leading, 8)
             
             // post image
-            Image ("4")
+            Image (post.imageUrl)
                 .resizable()
                 .scaledToFill()
                 .frame(height: 400)
@@ -61,7 +65,7 @@ struct QuestionCell: View {
             .foregroundColor(.black)
             
             // like label
-            Text("23 likes")
+            Text("\(post.likes) likes")
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame (maxWidth: .infinity, alignment: .leading)
@@ -69,8 +73,8 @@ struct QuestionCell: View {
                 .padding (.top, 1)
             // caption label
             HStack {
-                Text("batman ").fontWeight(.semibold)
-                Text("This is some test caption for now this is some test caption")
+                Text("\(post.user?.username ?? "") ").fontWeight(.semibold)
+                Text(post.caption)
             }
             .frame (maxWidth: .infinity, alignment:.leading)
             .font (.footnote)
@@ -90,5 +94,5 @@ struct QuestionCell: View {
 }
 
 #Preview {
-    QuestionCell()
+    QuestionCell(post: Post.MOCK_POSTS[0])
 }

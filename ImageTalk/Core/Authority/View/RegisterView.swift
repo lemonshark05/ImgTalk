@@ -23,7 +23,7 @@ struct RegisterView: View {
                 .padding()
             // text fields
             VStack {
-                TextField("Enter your fullname", text: $viewModel.fullname)
+                TextField("Enter your fullname", text: $viewModel.username)
                     .font (. subheadline)
                     .padding (12)
                     .background (Color(.systemGray6))

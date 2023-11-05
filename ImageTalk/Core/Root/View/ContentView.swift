@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ContentViewModel()
+    @StateObject var registerViewModel = RegisterViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group {
+            if viewModel.userSession == nil {
+                LoginView()
+                    .environmentObject(registerViewModel)
+            }else {
+                MainTabView()
+            }
+        }
     }
 }
 

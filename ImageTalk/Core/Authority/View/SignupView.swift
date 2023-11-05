@@ -9,15 +9,17 @@ import SwiftUI
 
 struct SignupView: View {
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var viewModel: RegisterViewModel
         
     var body: some View {
         VStack (spacing: 12) {
             Spacer ()
             
-            Text ("Welcome to ImageTalk!")
+            Text ("Welcome to ImageTalk, \(viewModel.username)")
                 .font(.title2)
                 .fontWeight (.bold)
                 .padding (.top)
+                .multilineTextAlignment(.center)
             
             Text ("Click below to complete registration and start using imageTalk")
                 .font(.footnote)
@@ -25,7 +27,7 @@ struct SignupView: View {
                 .padding(.horizontal, 24)
             
             Button {
-                print("Complete sign up")
+                Task { try await viewModel.createUser() }
             } label: {
                 Text ("Complete Sign Up")
                     .font (. subheadline)

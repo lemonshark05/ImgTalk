@@ -12,8 +12,8 @@ struct QuestionView: View {
         NavigationView {
             ScrollView {
                 LazyVStack(spacing: 30) {
-                    ForEach(0...10, id: \.self) { post in
-                        QuestionCell()
+                    ForEach(Post.MOCK_POSTS) { post in
+                        QuestionCell(post:post)
                     }
                 }
                 .padding(.top, 8)

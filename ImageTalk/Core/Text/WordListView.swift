@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct WordListView: View {
+    @State private var words: [WordCard] = []
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(words) { wordCard in
+            WordCardView(wordCard: wordCard)
+        }
+        .onAppear {
+            loadWords()
+        }
+    }
+    
+    private func loadWords() {
+        // Corrected the path to the CSV file location
+        if let url = Bundle.main.url(forResource: "words", withExtension: "csv", subdirectory: "ImageTalk/Words") {
+            let parser = CSVParser()
+            if let loadedWords = parser.loadCSV(contentsOfURL: url) {
+                self.words = loadedWords
+            }
+        }
     }
 }
 

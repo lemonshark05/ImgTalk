@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
     @State private var searchText = ""
+    @StateObject var viewModel = SearchViewModel()
     
     var body: some View {
         NavigationView {
@@ -25,7 +26,7 @@ struct SearchView: View {
                     .padding(.horizontal)
                     
                     LazyVStack(spacing: 12) {
-                        ForEach(User.MOCK_USERS) { user in
+                        ForEach(viewModel.users) { user in
                             NavigationLink(destination: ProfileView(user: user)) {
                                 HStack {
                                     Image(uiImage: UIImage(named: user.profileImageUrl ?? "") ?? UIImage())

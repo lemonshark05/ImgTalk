@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import Firebase
+
 class UserService {
-    
-    @Published var currentUser: User?
-    
-    static let shared = UserService()
-    
+
+    static func fetchAllUsers() async throws ->[User] {
+        let snapshot = try await Firestore.firestore().collection("users").getDocuments()
+        return snapshot.documents.compactMap({ try? $0.data(as: User.self)})
+    }
 }

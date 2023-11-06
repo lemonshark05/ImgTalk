@@ -10,9 +10,11 @@ import PhotosUI
 
 struct EditProfileView: View {
     @Environment(\.dismiss) var dimiss
-    @State private var selectedImage: PhotosPickerItem?
-    @State private var fullname = ""
-    @State private var bio = ""
+    @StateObject var viewModel: EditProfileViewModel
+
+    init(user: User){
+        self._viewModel = StateObject(wrappedValue: EditProfileViewModel(user: user))
+    }
     
     var body: some View {
         VStack{
@@ -31,7 +33,7 @@ struct EditProfileView: View {
                 Spacer()
                 
                 Button {
-                    print("Upload")
+                    Task { try await viewModel.updateUserData()}
                 }label: {
                     Text("Done")
                         .font(.subheadline)
@@ -43,14 +45,16 @@ struct EditProfileView: View {
             Divider()
         }
         
-        PhotosPicker(selection: $selectedImage) {
+        PhotosPicker(selection: $viewModel.selectedImage) {
             VStack {
-                Image(systemName: "person")
+                if let image = viewModel.profileImage {
+                    image
                     .resizable()
                     .foregroundColor(.white)
                     .background(.gray)
                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     .frame(width: 80, height: 80)
+                }
                 
                 Text("Edit profile picture")
                     .font(.footnote)
@@ -62,9 +66,9 @@ struct EditProfileView: View {
         .padding(.vertical, 8)
         
         VStack {
-            EditProfileRowView(title: "Name", placeholder: "Enter your name", text: $fullname)
+            EditProfileRowView(title: "Name", placeholder: "Enter your name", text: $viewModel.fullname)
             
-            EditProfileRowView(title: "Bio", placeholder: "Enter your bio", text: $bio)
+            EditProfileRowView(title: "Bio", placeholder: "Enter your bio", text: $viewModel.bio)
 
         }
         
@@ -95,5 +99,5 @@ struct EditProfileRowView: View {
 }
 
 #Preview {
-    EditProfileView()
+    EditProfileView(user:User.MOCK_USERS[0])
 }

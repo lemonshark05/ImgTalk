@@ -1,39 +1,42 @@
-# English Learner App(image talk and message)
+https://www.gradio.app/guides/real-time-speech-recognition
+https://www.gradio.app/guides/quickstart
+https://huggingface.co/openai/whisper-base.en
+https://huggingface.co/openai/whisper-base.en
 
-**Git:** https://github.com/lemonshark05/ImgTalk
+## **Overview**
 
-### **Overview:**
-
-The "English Learner" is a mobile application designed to assist users in enhancing their English language skills, particularly for the CELPIP test. The app offers a unique feature of automatically generating English descriptions from uploaded images, both in text and voice format, aiding users in understanding and articulating their surroundings better.
+The "English Learner" is a mobile application aimed at helping users improve their English skills, focusing particularly on preparation for the CELPIP test. The application uniquely generates English descriptions from uploaded images in both text and voice formats, aiding users in better understanding and articulating their environment.
 
 ### **Core Features:**
 
-- Image upload and automatic English description generation.
-- Text-to-speech functionality leveraging the hugging face dataset.
-- User authentication: Register and log in using Firebase.
+1. **Text-to-Speech**: As already implemented.
 
-### **Optional Features:**
+2. **User Authentication**: Firebase.
+https://github.com/lemonshark05/ImgTalk/assets/100770743/193e1366-44fa-4d30-864d-8074098b8203
 
-- Instant messaging capability for users to communicate and discuss image descriptions.
+3. **Vocabulary Book with Pronunciation Check**: 
 
-### **Languages & Tools:**
+4. **Study Groups**: Users can create or join study groups. Within these groups, they can share vocabulary lists, quiz each other, or share resources for the CELPIP test. This can be done through the Firebase Realtime Database.
 
-- **Language:** Swift 5
-- **Architecture:** MVVM (Model-View-ViewModel)
-- **Frameworks/Tools:** Huggingface (for dataset/API), Firebase (for authentication)
+5. **Mistake Tracking and Rewatch**: Record user mistakes in pronunciation or vocabulary tests and store them in Firebase. Users can revisit these mistakes, and perhaps even receive targeted practice questions based on their past errors.
+
+### **Web Development Focus:**
+
+- **User Dashboard**: A web-based dashboard where users can visualize their progress, and join study groups.
+- **Quiz Creator**: A feature that lets users or study groups create their own quizzes, which they can share within their groups or publicly.
+
+## **Languages & Tools**
+
+- **Language**: Swift 5
+- **Architecture**: MVVM (Model-View-ViewModel)
+- **Frameworks/Tools**: Huggingface (for dataset/API), Firebase (for authentication), Apple's Speech Framework (for voice recognition), Firebase Realtime Database (for history and scoring).
 
 ---
 
-### **10/06 Milestone #1:**
+## **Upcoming Milestones**
 
-- Integration of "kan-bayashi_ljspeech_vits" for text-to-speech.
-- Design all the page and finish all views
+### **11/06 Milestone #2**
 
-### **11/06 Milestone #2:**
-
-- Enable text upload feature.
 - Implement core functionality of generating English descriptions from images.
-- (If time allows) Start development of the instant messaging feature.
-
-> Note: Ensure the document is converted to PDF before uploading to Canvas, and double-check for spelling and grammar.
->
+- Begin development of Vocabulary Book with Pronunciation Check feature.
+- (If time allows) Start initial work on the Instant Messaging feature.

@@ -12,6 +12,7 @@ The "English Learner" is a mobile application aimed at helping users improve the
 1. **Text-to-Speech**: As already implemented.
 
 2. **User Authentication**: Firebase.
+
 https://github.com/lemonshark05/ImgTalk/assets/100770743/193e1366-44fa-4d30-864d-8074098b8203
 
 3. **Vocabulary Book with Pronunciation Check**: 

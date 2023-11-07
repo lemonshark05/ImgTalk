@@ -43,6 +43,14 @@ class BookViewModel: ObservableObject {
     func toggleMarked(for wordCardId: String) {
         if let index = wordCards.firstIndex(where: { $0.id == wordCardId }) {
             wordCards[index].marked.toggle()
+
+            // Update Firestore document
+            let wordCard = wordCards[index]
+            do {
+                try db.collection("wordCards").document(wordCard.id).setData(from: wordCard)
+            } catch {
+                print("Error updating marked status: \(error)")
+            }
         }
     }
     
@@ -73,6 +81,9 @@ class BookViewModel: ObservableObject {
                 }
             }
         }
+    }
+    deinit {
+        listenerRegistration?.remove()
     }
 }
 

@@ -11,7 +11,7 @@ import Speech
 
 struct WordCardView: View {
     let wordCard: WordCard
-    var viewModel: BookViewModel
+    @ObservedObject var viewModel: BookViewModel
     @State private var showDetails: Bool = false
     @State private var showAlert = false
     @State private var alertMessage = ""

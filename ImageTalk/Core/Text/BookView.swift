@@ -21,6 +21,11 @@ struct BookView: View {
                         VStack(alignment: .leading) {
                             Text(wordCard.word)
                                 .font(.headline)
+                            Image(systemName: wordCard.marked ? "star.fill" : "star")
+                                .foregroundColor(wordCard.marked ? .yellow : .gray)
+                                .onTapGesture {
+                                    viewModel.toggleMarked(for: wordCard.id)
+                                }
                         }
                     }
                 }

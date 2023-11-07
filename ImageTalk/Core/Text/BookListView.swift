@@ -9,12 +9,13 @@ import SwiftUI
 
 struct BookListView: View {
     @StateObject private var viewModel = BookListViewModel()
+    @State private var showingAddBookView = false
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(viewModel.books, id: \.id) { book in
-                    NavigationLink(destination: BookView(bookId: book.id)) {
+                    NavigationLink(destination: BookView(viewModel: BookViewModel(book: book))) {
                         Text(book.title)
                     }
                 }
@@ -22,17 +23,20 @@ struct BookListView: View {
             }
             .navigationBarTitle("Books")
             .navigationBarItems(trailing: Button(action: {
-                viewModel.addBook()
+                self.showingAddBookView = true
             }) {
                 Image(systemName: "plus")
             })
             .onAppear {
                 viewModel.fetchBooks()
             }
+            .sheet(isPresented: $showingAddBookView) {
+                AddBookView(viewModel: viewModel)
+            }
         }
     }
 }
 
 #Preview {
-    BookView()
+    BookListView()
 }

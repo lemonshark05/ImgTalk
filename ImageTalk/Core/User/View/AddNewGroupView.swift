@@ -13,7 +13,8 @@ import Firebase
 struct AddNewGroupView: View {
     let userId: String
     @Environment(\.dismiss) private var dismiss
-    @State private var groupSubject: String = ""
+    @State private var groupTitle: String = ""
+    @State private var groupTopic: String = ""
     @State private var showingAlert = false
     @State private var alertMessage = ""
     
@@ -38,7 +39,7 @@ struct AddNewGroupView: View {
                     Button("Done") {
                         addNewGroup()
                     }
-                    .disabled(groupSubject.isEmpty)
+                    .disabled(groupTitle.isEmpty)
                     .font(.subheadline)
                     .fontWeight(.semibold)
                 }
@@ -46,7 +47,10 @@ struct AddNewGroupView: View {
 
                 Divider()
 
-                TextField("Group Subject", text: $groupSubject)
+                TextField("Group Title", text: $groupTitle)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                TextField("Group Topic", text: $groupTopic)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
@@ -55,7 +59,6 @@ struct AddNewGroupView: View {
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }
-            .navigationTitle("Add New Group")
         }
     }
     
@@ -63,9 +66,9 @@ struct AddNewGroupView: View {
         // Create a new group with default or empty fields as needed
         let newGroup = StudyGroup(
             id: UUID().uuidString,
-            name: groupSubject,
-            topic: "", // Default or empty value
-            memberIds: [], // Start with an empty array of members
+            name: groupTitle,
+            topic: groupTopic, // Default or empty value
+            memberIds: [userId],
             adminId: userId,
             vocabListIds: [],
             quizIds: [],

@@ -11,6 +11,8 @@ The "English Learner" is a mobile application aimed at helping users improve the
 
 1. **Text-to-Speech**: As already implemented.
 
+https://github.com/lemonshark05/ImgTalk/assets/100770743/8d16567d-009a-4d3c-9bce-88fabfeabb22
+
 2. **User Authentication**: Firebase.
 
 https://github.com/lemonshark05/ImgTalk/assets/100770743/193e1366-44fa-4d30-864d-8074098b8203
@@ -18,6 +20,10 @@ https://github.com/lemonshark05/ImgTalk/assets/100770743/193e1366-44fa-4d30-864d
 3. **Vocabulary Book with Pronunciation Check**: 
 
 4. **Study Groups**: Users can create or join study groups. Within these groups, they can share vocabulary lists, quiz each other, or share resources for the CELPIP test. This can be done through the Firebase Realtime Database.
+
+
+https://github.com/lemonshark05/ImgTalk/assets/100770743/5c67b7e8-31e8-4386-9472-cd18bacc4169
+
 
 5. **Mistake Tracking and Rewatch**: Record user mistakes in pronunciation or vocabulary tests and store them in Firebase. Users can revisit these mistakes, and perhaps even receive targeted practice questions based on their past errors.
 

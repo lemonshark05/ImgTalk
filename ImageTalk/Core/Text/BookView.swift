@@ -11,16 +11,17 @@ import SwiftUI
 
 struct BookView: View {
     @StateObject var viewModel: BookViewModel
+    @State private var showingAddWordCardView = false
     
     var body: some View {
         List {
             Section(header: Text("Word Cards")) {
                 ForEach(viewModel.wordCards) { wordCard in
-                    VStack(alignment: .leading) {
-                        Text(wordCard.word)
-                            .font(.headline)
-                        Text(wordCard.explanation)
-                            .font(.subheadline)
+                    NavigationLink(destination: WordCardView(wordCard: wordCard, viewModel: viewModel)) {
+                        VStack(alignment: .leading) {
+                            Text(wordCard.word)
+                                .font(.headline)
+                        }
                     }
                 }
                 .onDelete(perform: viewModel.deleteWordCard)
@@ -29,9 +30,7 @@ struct BookView: View {
         .navigationBarTitle(viewModel.book.title)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {
-                    // Add WordCard action
-                }) {
+                NavigationLink(destination: AddWordCardView(viewModel: viewModel)) {
                     Image(systemName: "plus")
                 }
             }
@@ -40,5 +39,5 @@ struct BookView: View {
 }
 
 #Preview {
-    BookView(viewModel: BookViewModel(book: Book(id: "book1", title: "Sample Book", author: "hula", wordCardIds: [])))
+    BookView(viewModel: BookViewModel(book: Book(id: "book1", title: "Sample Book", author: "hula", wordCardIds: [], memberIds: [])))
 }

@@ -7,8 +7,6 @@
 
 import Foundation
 import Firebase
-
-import Firebase
 import FirebaseFirestore
 import FirebaseAuth
 
@@ -22,25 +20,49 @@ class BookListViewModel: ObservableObject {
     }
 
     func fetchBooks() {
+        guard let currentUserId = Auth.auth().currentUser?.uid else {
+            print("Current user is not authenticated")
+            return
+        }
+
         listenerRegistration = db.collection("books")
-            .whereField("author", isEqualTo: Auth.auth().currentUser?.uid ?? "")
+            .whereField("memberIds", arrayContains: currentUserId)
             .addSnapshotListener { [weak self] (querySnapshot, error) in
-                guard let self = self else { return }
                 if let error = error {
                     print("Error getting books: \(error)")
-                    self.books = []
-                } else {
-                    self.books = querySnapshot?.documents.compactMap { document -> Book? in
-                        try? document.data(as: Book.self)
-                    } ?? []
+                    self?.books = []
+                    return
+                }
+                
+                guard let documents = querySnapshot?.documents else {
+                    print("No documents found in 'books'")
+                    self?.books = []
+                    return
+                }
+                
+                self?.books = documents.compactMap { document in
+                    try? document.data(as: Book.self)
                 }
             }
     }
 
-    func addBook(book: Book) {
+    func addBook(title: String) {
+        guard let currentUserId = Auth.auth().currentUser?.uid else {
+            print("Current user is not authenticated")
+            return
+        }
+        
+        let newBook = Book(
+            id: UUID().uuidString,
+            title: title,
+            author: currentUserId,
+            wordCardIds: [],
+            memberIds: [currentUserId]
+        )
+        
         do {
-            let _ = try db.collection("books").addDocument(from: book)
-        } catch let error {
+            try db.collection("books").document(newBook.id).setData(from: newBook)
+        } catch {
             print("Error adding book: \(error)")
         }
     }
@@ -51,14 +73,12 @@ class BookListViewModel: ObservableObject {
             db.collection("books").document(bookId).delete() { error in
                 if let error = error {
                     print("Error deleting book: \(error)")
-                } else {
                 }
             }
         }
     }
-    
-    func removeListener() {
+
+    deinit {
         listenerRegistration?.remove()
     }
 }
-

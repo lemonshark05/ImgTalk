@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct AddWordCardView: View {
+    @Environment(\.presentationMode) var presentationMode
     @State private var word = ""
     @State private var explanation = ""
     @State private var synonyms = ""
     @State private var examples = ""
     
-    var onSave: (WordCard) -> Void
+    var viewModel: BookViewModel
     
     var body: some View {
         NavigationView {
@@ -33,24 +34,21 @@ struct AddWordCardView: View {
             }
             .navigationBarTitle("New Word", displayMode: .inline)
             .navigationBarItems(leading: Button("Cancel") {
-                // Code to dismiss the view
+                presentationMode.wrappedValue.dismiss()
             }, trailing: Button("Save") {
                 let newWordCard = WordCard(
-                    id: UUID().uuidString,
+                    id: UUID().uuidString, // It's safe to assign a UUID here as we don't need to use Firestore's document IDs
                     word: word,
                     explanation: explanation,
                     synonyms: synonyms.components(separatedBy: ";").filter { !$0.isEmpty },
                     examples: examples.components(separatedBy: ";").filter { !$0.isEmpty },
-                    bookIds: []
+                    bookIds: [viewModel.book.id],
+                    wrongTimes: 0,
+                    marked: false
                 )
-                onSave(newWordCard)
+                viewModel.addWordCard(wordCard: newWordCard)
+                presentationMode.wrappedValue.dismiss()
             })
         }
-    }
-}
-
-#Preview {
-    AddWordCardView { wordCard in
-        print("Saved WordCard: \(wordCard)")
     }
 }

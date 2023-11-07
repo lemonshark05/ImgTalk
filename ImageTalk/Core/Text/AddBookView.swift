@@ -12,20 +12,17 @@ struct AddBookView: View {
     @ObservedObject var viewModel: BookListViewModel
     
     @State private var title: String = ""
-    @State private var author: String = ""
     
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Book Details")) {
                     TextField("Title", text: $title)
-                    TextField("Author", text: $author)
                 }
                 
                 Button("Add Book") {
                     // Create a new book object
-                    let newBook = Book(id: UUID().uuidString, title: title, author: author, wordCardIds: [])
-                    viewModel.addBook(book: newBook)
+                    viewModel.addBook(title: title)
                     presentationMode.wrappedValue.dismiss()
                 }
             }

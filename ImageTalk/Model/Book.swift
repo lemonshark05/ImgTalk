@@ -13,6 +13,7 @@ struct Book: Identifiable, Hashable, Codable {
     var title: String
     var author: String
     var wordCardIds: [String]
+    var memberIds: [String]
     
     var isCurrentUserTheAuthor: Bool {
         guard let currentUid = Auth.auth().currentUser?.uid else { return false }

@@ -9,12 +9,13 @@ import Foundation
 import Firebase
 
 struct WordCard: Identifiable, Hashable, Codable {
-    let id: String
+    var id: String
     var word: String
     var explanation: String
     var synonyms: [String]
     var examples: [String]
     var bookIds: [String]
-    
+    var wrongTimes: Int
+    var marked: Bool
 }
 

@@ -11,7 +11,7 @@ import Speech
 
 struct WordCardView: View {
     let wordCard: WordCard
-    
+    var viewModel: BookViewModel
     @State private var showDetails: Bool = false
     @State private var showAlert = false
     @State private var alertMessage = ""
@@ -29,6 +29,13 @@ struct WordCardView: View {
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                 
+                Image(systemName: wordCard.marked ? "star.fill" : "star")
+                    .foregroundColor(wordCard.marked ? .yellow : .gray)
+                    .onTapGesture {
+                        viewModel.toggleMarked(for: wordCard.id)
+                    }
+                    .padding(.leading, 5)
+                
                 Spacer()
                 
                 Button(action: pronounceWord) {
@@ -38,6 +45,15 @@ struct WordCardView: View {
                 }
             }
             .padding(.bottom, 8)
+            
+            if wordCard.wrongTimes > 0 {
+                HStack {
+                    Text("Mistakes: \(wordCard.wrongTimes)")
+                        .font(.subheadline)
+                        .foregroundColor(.red)
+                    Spacer()
+                }
+            }
             
             Text(wordCard.explanation)
                 .font(.body)
@@ -91,7 +107,7 @@ struct WordCardView: View {
         let combinedText = """
         \(wordCard.word).
         \(wordCard.explanation).
-        Synonyms: \(wordCard.synonyms.joined(separator: ", ")).
+        Synonyms: \(wordCard.synonyms.joined(separator: "; ")).
         Examples: \(wordCard.examples.joined(separator: "; ")).
         """
         
@@ -190,6 +206,31 @@ struct WordCardView: View {
 }
 
 
-#Preview {
-    WordCardView(wordCard: WordCard(id: "", word: "Abundant", explanation: "test1", synonyms: ["Apple","Banana"], examples: [], bookIds: []))
+struct WordCardView_Previews: PreviewProvider {
+    static let sampleBook = Book(
+        id: "book1",
+        title: "Sample Book",
+        author: "AuthorID",
+        wordCardIds: [],
+        memberIds: []
+    )
+
+    static let sampleWordCard = WordCard(
+        id: "1",
+        word: "Abundant",
+        explanation: "Existing or available in large quantities; plentiful.",
+        synonyms: ["ample", "bountiful", "copious"],
+        examples: ["There is abundant evidence that cars contribute to global pollution."],
+        bookIds: ["book1"],
+        wrongTimes: 2,
+        marked: true
+    )
+    
+    static var previews: some View {
+        // Initialize the BookViewModel with the sample book
+        let viewModel = BookViewModel(book: sampleBook)
+        
+        // Pass the sample word card and view model to the WordCardView
+        WordCardView(wordCard: sampleWordCard, viewModel: viewModel)
+    }
 }

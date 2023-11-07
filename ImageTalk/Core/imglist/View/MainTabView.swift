@@ -36,7 +36,7 @@ struct MainTabView: View {
                     Image (systemName: "plus.square")
                 }.tag(2)
             
-            Text("Notifications")
+            GroupListView(user: user)
                 .onAppear {
                     selectedIndex = 3
                 }

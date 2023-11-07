@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90CF1A32AF9D3D90019B646 /* StudyGroupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CF1A22AF9D3D90019B646 /* StudyGroupService.swift */; };
 		D95E7C642A2315400016CC16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95E7C632A2315400016CC16 /* Assets.xcassets */; };
 		D95E7C672A2315400016CC16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95E7C662A2315400016CC16 /* Preview Assets.xcassets */; };
 		D95E7C8D2A2315A10016CC16 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E7C8C2A2315A10016CC16 /* TestData.swift */; };
@@ -14,6 +15,12 @@
 		D95E7C912A23180D0016CC16 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E7C902A23180D0016CC16 /* ListView.swift */; };
 		D9623ABD2A293A3C007F4256 /* HuggingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9623ABC2A293A3C007F4256 /* HuggingAPI.swift */; };
 		D983CCE52A2C443C007B6EA2 /* RecorderAndPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D983CCE42A2C443C007B6EA2 /* RecorderAndPlayer.swift */; };
+		D98D596B2AF9B32200985E5E /* StudyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D596A2AF9B32200985E5E /* StudyGroup.swift */; };
+		D98D596D2AF9B37900985E5E /* StudyGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D596C2AF9B37900985E5E /* StudyGroupView.swift */; };
+		D98D596F2AF9B39A00985E5E /* AddNewGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D596E2AF9B39A00985E5E /* AddNewGroupView.swift */; };
+		D98D59712AF9B3B200985E5E /* StudyGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D59702AF9B3B200985E5E /* StudyGroupViewModel.swift */; };
+		D98D59732AF9B50400985E5E /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D59722AF9B50400985E5E /* GroupListView.swift */; };
+		D98D59752AF9BA5F00985E5E /* GroupListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D59742AF9BA5F00985E5E /* GroupListViewModel.swift */; };
 		D9972FBC2A28797100F84A27 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9972FBB2A28797100F84A27 /* ProgressBar.swift */; };
 		D99E28E42AF6F06600951831 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E28E32AF6F06600951831 /* PostGridView.swift */; };
 		D99E28E62AF6F25900951831 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E28E52AF6F25900951831 /* ProfileHeaderView.swift */; };
@@ -28,7 +35,6 @@
 		D99E296D2AF830FB00951831 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D99E296C2AF830FB00951831 /* FirebaseFirestore */; };
 		D99E29712AF830FB00951831 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D99E29702AF830FB00951831 /* FirebaseFirestoreSwift */; };
 		D99E29872AF830FB00951831 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D99E29862AF830FB00951831 /* FirebaseStorage */; };
-		D99E2BB52AF8585F00951831 /* words.csv in Resources */ = {isa = PBXBuildFile; fileRef = D99E2BB42AF8585F00951831 /* words.csv */; };
 		D99E2BB72AF85E0500951831 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E2BB62AF85E0500951831 /* SearchViewModel.swift */; };
 		D99E2BB92AF865D100951831 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E2BB82AF865D100951831 /* EditProfileView.swift */; };
 		D99E2BBC2AF86E0000951831 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E2BBB2AF86E0000951831 /* EditProfileViewModel.swift */; };
@@ -44,7 +50,6 @@
 		D9D258FF2AD12CFD00914B0F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D258FE2AD12CFD00914B0F /* RegisterViewModel.swift */; };
 		D9D259012AD12D3500914B0F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D259002AD12D3500914B0F /* RegisterView.swift */; };
 		D9D259042AD12DF400914B0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D259032AD12DF400914B0F /* User.swift */; };
-		D9D259062AD12E0C00914B0F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D259052AD12E0C00914B0F /* Message.swift */; };
 		D9D259092AD12E9A00914B0F /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D259082AD12E9A00914B0F /* MessageService.swift */; };
 		D9D2590B2AD12ED600914B0F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2590A2AD12ED600914B0F /* UserService.swift */; };
 		D9D2590F2AD133AC00914B0F /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2590E2AD133AC00914B0F /* ImageViewModel.swift */; };
@@ -64,6 +69,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D90CF1A22AF9D3D90019B646 /* StudyGroupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupService.swift; sourceTree = "<group>"; };
 		D95E7C5C2A23153F0016CC16 /* ImageTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E7C632A2315400016CC16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D95E7C662A2315400016CC16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -72,6 +78,12 @@
 		D95E7C902A23180D0016CC16 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D9623ABC2A293A3C007F4256 /* HuggingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuggingAPI.swift; sourceTree = "<group>"; };
 		D983CCE42A2C443C007B6EA2 /* RecorderAndPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderAndPlayer.swift; sourceTree = "<group>"; };
+		D98D596A2AF9B32200985E5E /* StudyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroup.swift; sourceTree = "<group>"; };
+		D98D596C2AF9B37900985E5E /* StudyGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupView.swift; sourceTree = "<group>"; };
+		D98D596E2AF9B39A00985E5E /* AddNewGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroupView.swift; sourceTree = "<group>"; };
+		D98D59702AF9B3B200985E5E /* StudyGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupViewModel.swift; sourceTree = "<group>"; };
+		D98D59722AF9B50400985E5E /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
+		D98D59742AF9BA5F00985E5E /* GroupListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListViewModel.swift; sourceTree = "<group>"; };
 		D98F27862A2B088500D3B24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D9972FBB2A28797100F84A27 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		D99E28E32AF6F06600951831 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
@@ -633,7 +645,6 @@
 		D99E2BAD2AF8311B00951831 /* libcryptex.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcryptex.tbd; path = usr/lib/libcryptex.tbd; sourceTree = SDKROOT; };
 		D99E2BAE2AF8311C00951831 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		D99E2BAF2AF8311C00951831 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
-		D99E2BB42AF8585F00951831 /* words.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = words.csv; path = ../../../../Downloads/words.csv; sourceTree = "<group>"; };
 		D99E2BB62AF85E0500951831 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		D99E2BB82AF865D100951831 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		D99E2BBB2AF86E0000951831 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
@@ -649,7 +660,6 @@
 		D9D258FE2AD12CFD00914B0F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D9D259002AD12D3500914B0F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D9D259032AD12DF400914B0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D9D259052AD12E0C00914B0F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		D9D259082AD12E9A00914B0F /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		D9D2590A2AD12ED600914B0F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D9D2590E2AD133AC00914B0F /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
@@ -703,7 +713,6 @@
 		D95E7C5E2A23153F0016CC16 /* ImageTalk */ = {
 			isa = PBXGroup;
 			children = (
-				D99E2BB12AF8585100951831 /* Words */,
 				D99E28F62AF7032C00951831 /* App */,
 				D9D258F42AD12BDB00914B0F /* Core */,
 				D95E7C8B2A2315940016CC16 /* Model */,
@@ -731,9 +740,9 @@
 				D95E7C8C2A2315A10016CC16 /* TestData.swift */,
 				D9623ABC2A293A3C007F4256 /* HuggingAPI.swift */,
 				D9D259032AD12DF400914B0F /* User.swift */,
-				D9D259052AD12E0C00914B0F /* Message.swift */,
 				D9E0E11F2AF37D7300444EF6 /* Post.swift */,
 				D99E2BC02AF8AE6100951831 /* WordCard.swift */,
+				D98D596A2AF9B32200985E5E /* StudyGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1336,19 +1345,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		D99E2BB12AF8585100951831 /* Words */ = {
-			isa = PBXGroup;
-			children = (
-				D99E2BB42AF8585F00951831 /* words.csv */,
-			);
-			path = Words;
-			sourceTree = "<group>";
-		};
 		D99E2BBA2AF86DE900951831 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				D99E28E92AF6FA1100951831 /* UploadPostViewModel.swift */,
 				D99E2BBB2AF86E0000951831 /* EditProfileViewModel.swift */,
+				D98D59702AF9B3B200985E5E /* StudyGroupViewModel.swift */,
+				D98D59742AF9BA5F00985E5E /* GroupListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1366,6 +1369,9 @@
 				D99E28E52AF6F25900951831 /* ProfileHeaderView.swift */,
 				D99E28E72AF6F35500951831 /* UploadPostView.swift */,
 				D99E2BB82AF865D100951831 /* EditProfileView.swift */,
+				D98D596C2AF9B37900985E5E /* StudyGroupView.swift */,
+				D98D596E2AF9B39A00985E5E /* AddNewGroupView.swift */,
+				D98D59722AF9B50400985E5E /* GroupListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1450,6 +1456,7 @@
 			children = (
 				D9D259082AD12E9A00914B0F /* MessageService.swift */,
 				D9D2590A2AD12ED600914B0F /* UserService.swift */,
+				D90CF1A22AF9D3D90019B646 /* StudyGroupService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1552,7 +1559,6 @@
 			files = (
 				D95E7C672A2315400016CC16 /* Preview Assets.xcassets in Resources */,
 				D99E28EC2AF7020400951831 /* GoogleService-Info.plist in Resources */,
-				D99E2BB52AF8585F00951831 /* words.csv in Resources */,
 				D95E7C642A2315400016CC16 /* Assets.xcassets in Resources */,
 				D9A6EFA52A24167600B519F5 /* info.txt in Resources */,
 			);
@@ -1569,12 +1575,15 @@
 				D99E2BC32AF8AF4700951831 /* WordListView.swift in Sources */,
 				D9D259012AD12D3500914B0F /* RegisterView.swift in Sources */,
 				D983CCE52A2C443C007B6EA2 /* RecorderAndPlayer.swift in Sources */,
+				D98D59712AF9B3B200985E5E /* StudyGroupViewModel.swift in Sources */,
 				D99E28E42AF6F06600951831 /* PostGridView.swift in Sources */,
 				D9E0E1222AF37DD200444EF6 /* CurrentProfileView.swift in Sources */,
 				D9D258FF2AD12CFD00914B0F /* RegisterViewModel.swift in Sources */,
+				D98D596B2AF9B32200985E5E /* StudyGroup.swift in Sources */,
 				D95E7C8F2A2315DF0016CC16 /* imagesView.swift in Sources */,
 				D95E7C8D2A2315A10016CC16 /* TestData.swift in Sources */,
 				D99E28FF2AF706BB00951831 /* ContentView.swift in Sources */,
+				D98D596F2AF9B39A00985E5E /* AddNewGroupView.swift in Sources */,
 				D9623ABD2A293A3C007F4256 /* HuggingAPI.swift in Sources */,
 				D95E7C912A23180D0016CC16 /* ListView.swift in Sources */,
 				D9E0E11C2AF3524400444EF6 /* CreatePasswordView.swift in Sources */,
@@ -1582,20 +1591,23 @@
 				D99E28EA2AF6FA1100951831 /* UploadPostViewModel.swift in Sources */,
 				D99E29032AF706DA00951831 /* ContentViewModel.swift in Sources */,
 				D9D259092AD12E9A00914B0F /* MessageService.swift in Sources */,
+				D98D596D2AF9B37900985E5E /* StudyGroupView.swift in Sources */,
 				D9E0E1162AF3490500444EF6 /* AddEmailView.swift in Sources */,
+				D98D59732AF9B50400985E5E /* GroupListView.swift in Sources */,
 				D9972FBC2A28797100F84A27 /* ProgressBar.swift in Sources */,
 				D99E2BBC2AF86E0000951831 /* EditProfileViewModel.swift in Sources */,
 				D99E2BC12AF8AE6100951831 /* WordCard.swift in Sources */,
 				D9C939052AE9CDD400C47144 /* UserListView.swift in Sources */,
 				D99E2BBF2AF8AE4E00951831 /* WordCardView.swift in Sources */,
+				D90CF1A32AF9D3D90019B646 /* StudyGroupService.swift in Sources */,
 				D9D259042AD12DF400914B0F /* User.swift in Sources */,
 				D99E28E82AF6F35500951831 /* UploadPostView.swift in Sources */,
 				D9C939082AE9CF2100C47144 /* SpeechToTextView.swift in Sources */,
 				D9E0E10D2AF305F600444EF6 /* UserStatView.swift in Sources */,
-				D9D259062AD12E0C00914B0F /* Message.swift in Sources */,
 				D9E0E1132AF310FB00444EF6 /* SearchView.swift in Sources */,
 				D99E2BB92AF865D100951831 /* EditProfileView.swift in Sources */,
 				D9D2590B2AD12ED600914B0F /* UserService.swift in Sources */,
+				D98D59752AF9BA5F00985E5E /* GroupListViewModel.swift in Sources */,
 				D99E2BB72AF85E0500951831 /* SearchViewModel.swift in Sources */,
 				D99E28E62AF6F25900951831 /* ProfileHeaderView.swift in Sources */,
 				D9E0E1112AF30E0C00444EF6 /* QuestionView.swift in Sources */,

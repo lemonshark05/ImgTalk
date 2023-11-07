@@ -8,6 +8,7 @@
 import Foundation
 import PhotosUI
 import SwiftUI
+import Firebase
 
 @MainActor
 class EditProfileViewModel: ObservableObject {
@@ -21,6 +22,8 @@ class EditProfileViewModel: ObservableObject {
     @Published var fullname = ""
     @Published var bio = ""
     
+    private var uiImage: UIImage?
+    
     init(user: User){
         self.user = user
     }
@@ -30,17 +33,27 @@ class EditProfileViewModel: ObservableObject {
         
         guard let data = try? await item.loadTransferable(type: Data.self) else { return }
         guard let uiImage = UIImage(data: data) else { return }
+        self.uiImage
         self.profileImage = Image(uiImage: uiImage)
     }
     
     func updateUserData() async throws {
         // update all user data if changed
+        var data = [String: Any]()
+//        if let uiImage = user.uiImage{
+//            let imageUrl = try await ImageUploader.uploadImage(image: uiImage)
+//        }
+        
         if !fullname.isEmpty && user.fullname != fullname{
-            print("Debug: Update fullname: \(fullname)")
+            data["fullname"] = fullname
         }
         
         if !bio.isEmpty && user.bio != bio{
-            print("Debug: Update bio: \(bio)")
+            data["bio"] = bio
+        }
+        
+        if !data.isEmpty{
+            try await Firestore.firestore().collection("users").document(user.id).updateData(data)
         }
     }
 }
